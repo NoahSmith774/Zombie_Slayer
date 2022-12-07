@@ -548,7 +548,7 @@ class GameView(arcade.View):
             if self.shoot_pressed:
                 arcade.play_sound(self.shoot_sound)
                 bullet = arcade.Sprite(
-                    "bullet.png",
+                    "resources/Images/items/bullet.png",
                     SPRITE_SCALING_LASER,
                 )
 
