@@ -289,8 +289,8 @@ class GameView(arcade.View):
         self.collect_coin_sound = arcade.load_sound(":resources:sounds/coin1.wav")
         self.jump_sound = arcade.load_sound(":resources:sounds/jump1.wav")
         self.game_over = arcade.load_sound(":resources:sounds/gameover1.wav")
-        self.shoot_sound = arcade.load_sound(":resources:sounds/hurt5.wav")
-        self.hit_sound = arcade.load_sound(":resources:sounds/hit5.wav")
+        self.shoot_sound = arcade.load_sound("resources/sounds/hurt5.wav")
+        self.hit_sound = arcade.load_sound("resources/sounds/hit5.wav")
 
     def setup(self):
         """Set up the game here. Call this function to restart the game."""
@@ -689,7 +689,7 @@ class GameOverView(arcade.View):
         """Draw the game overview"""
         self.clear()
         arcade.draw_text(
-            "You were eaten alive! - Click to Restart",
+            "Game Over! - Click to Restart",
             SCREEN_WIDTH / 2,
             SCREEN_HEIGHT / 2,
             arcade.color.WHITE,
