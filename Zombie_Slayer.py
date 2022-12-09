@@ -227,7 +227,7 @@ class MainMenu(arcade.View):
             anchor_x="center",
         )
         arcade.draw_text(
-            "Use arrow keys to move and P to shoot",
+            "Use Arrow Keys to move and P to shoot",
             SCREEN_WIDTH / 2,
             SCREEN_HEIGHT / 2,
             arcade.color.RED_DEVIL,
@@ -677,7 +677,7 @@ class GameView(arcade.View):
             else:
                 # Figure out how many points this coin is worth
                 if "Points" not in collision.properties:
-                    print("Warning, collected a coin without a Points property.")
+                    print("")
                 else:
                     points = int(collision.properties["Points"])
                     self.score += points
