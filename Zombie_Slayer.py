@@ -1,7 +1,5 @@
 """
-Platformer Game
-
-python -m arcade.examples.platform_tutorial.11_animate_character
+Zombie Slayer
 """
 import math
 import os
@@ -13,7 +11,7 @@ SCREEN_WIDTH = 1000
 SCREEN_HEIGHT = 650
 SCREEN_TITLE = "Zombie Slayer"
 
-# Constants used to scale our sprites from their original size
+# Constants used to scale sprites from their original size
 TILE_SCALING = 0.5
 CHARACTER_SCALING = TILE_SCALING * 2
 COIN_SCALING = TILE_SCALING
@@ -25,13 +23,13 @@ SPRITE_SCALING_LASER = 0.8
 SHOOT_SPEED = 15
 BULLET_SPEED = 12
 BULLET_DAMAGE = 25
-# Movement speed of player, in pixels per frame
+
+# Movement speed of player, in pixels/frame
 PLAYER_MOVEMENT_SPEED = 7
 GRAVITY = 1.5
 PLAYER_JUMP_SPEED = 30
 
-# How many pixels to keep as a minimum margin between the character
-# and the edge of the screen.
+# How many pixels to keep as a minimum margin between the character and the edge of the screen.
 LEFT_VIEWPORT_MARGIN = 200
 RIGHT_VIEWPORT_MARGIN = 200
 BOTTOM_VIEWPORT_MARGIN = 150
@@ -302,7 +300,7 @@ class GameView(arcade.View):
         # Map name
         map_name = "resources/tiled_maps/map_with_ladders.json"
 
-        # Layer Specific Options for the Tilemap
+        # Layer Specific Options for the Tile map
         layer_options = {
             LAYER_NAME_PLATFORMS: {
                 "use_spatial_hash": True,
@@ -349,8 +347,6 @@ class GameView(arcade.View):
         # Calculate the right edge of the my_map in pixels
         self.end_of_map = self.tile_map.width * GRID_PIXEL_SIZE
 
-
-
         # -- Enemies
         enemies_layer = self.tile_map.object_lists[LAYER_NAME_ENEMIES]
 
@@ -377,7 +373,7 @@ class GameView(arcade.View):
                 enemy.change_x = my_object.properties["change_x"]
             self.scene.add_sprite(LAYER_NAME_ENEMIES, enemy)
 
-        # Add bullet spritelist to Scene
+        # Add bullet sprite list to Scene
         self.scene.add_sprite_list(LAYER_NAME_BULLETS)
         self.scene.add_sprite_list(LAYER_NAME_PLAYER_DEATH_ZONES)
 
@@ -439,7 +435,7 @@ class GameView(arcade.View):
 
     def process_keychange(self):
         """
-        Called when we change a key up/down or we move on/off a ladder.
+        Called when we change a key up/down / we move on/off a ladder.
         """
         # Process up/down
         if self.up_pressed and not self.down_pressed:
