@@ -219,11 +219,27 @@ class MainMenu(arcade.View):
         """Draw the menu"""
         self.clear()
         arcade.draw_text(
-            "Zombie Slayer - Click to play",
+            "Zombie Slayer",
+            SCREEN_WIDTH / 2,
+            SCREEN_HEIGHT / 1.5,
+            arcade.color.RED_DEVIL,
+            font_size=100,
+            anchor_x="center",
+        )
+        arcade.draw_text(
+            "Use arrow keys to move and P to shoot",
             SCREEN_WIDTH / 2,
             SCREEN_HEIGHT / 2,
             arcade.color.RED_DEVIL,
-            font_size=30,
+            font_size=25,
+            anchor_x="center",
+        )
+        arcade.draw_text(
+            "Click to play",
+            SCREEN_WIDTH / 2,
+            SCREEN_HEIGHT / 5,
+            arcade.color.BLACK,
+            font_size=50,
             anchor_x="center",
         )
 
